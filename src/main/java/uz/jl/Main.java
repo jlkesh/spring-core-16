@@ -39,6 +39,8 @@ public class Main {
 //
         User bean = context.getBean(User.class);
         System.out.println(bean);
+        DbConfiguration bean1 = context.getBean(DbConfiguration.class);
+        System.out.println("bean1 = " + bean1);
 
     }
 

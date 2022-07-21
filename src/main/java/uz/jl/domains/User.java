@@ -3,6 +3,8 @@ package uz.jl.domains;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -12,9 +14,17 @@ import java.util.List;
 @ToString
 @Component
 public class User {
-    private String id;
+    private Integer id;
     private String username;
+
     private List<Card> cards;
+
+    private Student student;
+
+    @Autowired
+    public void setStudent(Student student) {
+        this.student = student;
+    }
 }
 
 @Getter

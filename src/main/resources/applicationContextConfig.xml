@@ -4,34 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="mapped.xml"/>
-    <import resource="list.xml"/>
-
-    <bean class="uz.jl.domains.Book" name="book" scope="singleton"
-          init-method="initBean"
-          destroy-method="destroyMethod"
-          lazy-init="true"
-          factory-method="getInstance"
-    >
-        <!--            <property name="id" value="1"/>-->
-        <!--            <property name="name" value="Otgan Kunlar"/>-->
-        <!--            <property name="author" value="John Doe :smile"/>-->
-    </bean>
-
-    <bean class="uz.jl.BookService" id="bookService">
-
-    </bean>
-
-    <bean class="uz.jl.BookController" id="bookController">
-        <constructor-arg name="bookService" ref="bookService"/>
-    </bean>
-
-
-    <!--    <bean class="uz.jl.domains.Book" name="book" scope="singleton" init-method="initBean">-->
-    <!--        <constructor-arg name="id" value="2"/>-->
-    <!--        <constructor-arg name="name" value="My Resume"/>-->
-    <!--        <constructor-arg name="author" value="Men"/>-->
-    <!--    </bean>-->
 
 
 

@@ -8,6 +8,8 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import uz.jl.domains.Book;
+import uz.jl.domains.Student;
+import uz.jl.domains.User;
 
 public class Main {
 
@@ -22,15 +24,21 @@ public class Main {
 //        Book book2 = (Book) beanFactory.getBean("book");
 //        System.out.println("book2 = " + book2);
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContextConfig.xml");
-        System.out.println("Hello");
-        Book book = context.getBean(Book.class);
-        Book book2 = context.getBean(Book.class);
-        Book book3 = context.getBean(Book.class);
-
-        BookController bookController = context.getBean(BookController.class);
-        System.out.println("bookController = " + bookController);
-        BookService bookService = bookController.bookService;
-        System.out.println("bookService = " + bookService);
+//        System.out.println("Hello");
+//        Book book = context.getBean(Book.class);
+//        Book book2 = context.getBean(Book.class);
+//        Book book3 = context.getBean(Book.class);
+//
+//        BookController bookController = context.getBean(BookController.class);
+//        System.out.println("bookController = " + bookController);
+//        BookService bookService = bookController.bookService;
+//        System.out.println("bookService = " + bookService);
+//
+        Student student = context.getBean(Student.class);
+        System.out.println(student);
+//
+        User bean = context.getBean(User.class);
+        System.out.println(bean);
 
     }
 

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="card1" class="uz.jl.domains.Card">
+        <property name="id" value="1"/>
+        <property name="pan" value="8600909021345687"/>
+        <property name="expiry" value="09/25"/>
+    </bean>
+
+    <bean id="card2" class="uz.jl.domains.Card">
+        <property name="id" value="2"/>
+        <property name="pan" value="9860909021345687"/>
+        <property name="expiry" value="06/24"/>
+    </bean>
+
+
+    <bean id="user" class="uz.jl.domains.User" >
+        <property name="id" value="1"/>
+        <property name="username" value="john"/>
+        <property name="cards">
+            <map>
+                <entry key="uzcard" value-ref="card1"/>
+                <entry key="humo" value-ref="card2"/>
+            </map>
+        </property>
+    </bean>
+</beans>

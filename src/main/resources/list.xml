@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="uz.jl.domains.Subject" id="subject1">
+        <property name="id" value="1"/>
+        <property name="name" value="Math"/>
+    </bean>
+
+    <bean class="uz.jl.domains.Subject" id="subject2">
+        <property name="id" value="2"/>
+        <property name="name" value="Psychology"/>
+    </bean>
+
+    <bean class="uz.jl.domains.Subject" id="subject3">
+        <property name="id" value="3"/>
+        <property name="name" value="Geography"/>
+    </bean>
+
+    <bean class="uz.jl.domains.Student" id="student">
+        <property name="id" value="12"/>
+        <property name="subjects">
+            <list>
+                <ref bean="subject1"/>
+                <ref bean="subject2"/>
+                <ref bean="subject3"/>
+            </list>
+        </property>
+    </bean>
+</beans>
